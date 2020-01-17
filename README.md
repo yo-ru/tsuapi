@@ -1,2 +1,7 @@
 # tsuapi
-the api for tsumori
+
+## Requirements
+- node.js
+
+## Execution
+- `npm start` - Start the API
