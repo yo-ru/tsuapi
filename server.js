@@ -7,7 +7,7 @@ const mysql = require('mysql');
 const config = require('./config.json');
 
 // Routes
-const auth = require('./auth');
+const auth = require('./server/auth');
 
 
 // MySQL Connection
