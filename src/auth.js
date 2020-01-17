@@ -1,7 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
 const nJwt = require('njwt');
-const config = require('./config.json');
+const config = require('../config.json');
 
 function createRouter(db) {
 	const router = express.Router();
