@@ -3,7 +3,7 @@
 ## Requirements
 - node.js
 
-# Setup
+## Setup
 - `npm install` - Install dependencies
 
 ## Execution
