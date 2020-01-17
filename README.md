@@ -13,6 +13,7 @@
 
 ## Setup
 - `npm install` - Install dependencies
+- `nano config.json` - Configure API
 
 ## Execution
 - `npm start` - Start the API
