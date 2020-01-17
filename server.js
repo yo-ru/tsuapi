@@ -4,7 +4,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const bearerToken = require('express-bearer-token');
 const mysql = require('mysql');
-const config= require('./config.json');
+const config = require('./config.json');
 
 // Routes
 const auth = require('./auth');
@@ -38,7 +38,7 @@ const app = express()
 	.use(bearerToken())
 
 	// Routes
-	.use('/', auth(connection));
+	.use(auth(connection));
 
 
 // Listen
