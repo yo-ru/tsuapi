@@ -1,6 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
 const nJwt = require('njwt');
+const config = require('./config.json');
 
 function createRouter(db) {
 	const router = express.Router();
@@ -44,7 +45,7 @@ function createRouter(db) {
 			// Unauthorized - Incorrect Password
 			if (!bcrypt.compareSync(req.body.password, user[0].password)) return res.status(401).json({status: 'unauthorized', auth: false, token: null});
 			// Authorized - Correct Password
-			var jwt = nJwt.create({id: user[0].id}, "JvjPeHEkNg");
+			var jwt = nJwt.create({id: user[0].id}, config.secret);
 			jwt.setExpiration(new Date().getTime() + (24*60*60*1000));
 			res.status(200).json({status: 'authorized', auth: true, token: jwt.compact()});
 		});
