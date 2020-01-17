@@ -1,5 +1,5 @@
 const nJwt = require('njwt');
-const config = require('./config.json');
+const config = require('../config.json');
 
 
 function jwtAuth(req, res, next) {
