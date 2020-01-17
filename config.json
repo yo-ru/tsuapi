@@ -1,0 +1,10 @@
+{
+  "port": 8000,
+  "secret": "JvjPeHEkNg",
+  "mysql": {
+  	"host": "localhost",
+	  "user": "night",
+	  "password": "Superl1nus",
+	  "database": "tsumori"
+  }
+}
