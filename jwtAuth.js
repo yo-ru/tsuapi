@@ -9,7 +9,7 @@ function jwtAuth(req, res, next) {
 	// Authorization
 	nJwt.verify(req.token, config.secret, function(err, decoded) {
 		// Error
-		if (err) return res.status(500).json({status: 'error', auth: false});
+		if (err) return res.status(500).json({status: 'internal server error', auth: false});
 		// Authorized
 		req.userId = decoded.body.id;
 		next();
