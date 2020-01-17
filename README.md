@@ -1,4 +1,5 @@
 # tsuapi
+tsuapi is an API designed for [Tsumori](https://github.com/nightsh0t/tsumori), a fully functional website builder.
 
 ## Handlers
 
