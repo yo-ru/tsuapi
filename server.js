@@ -4,6 +4,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const bearerToken = require('express-bearer-token');
 const mysql = require('mysql');
+const config= require('./config.json');
 
 // Routes
 const auth = require('./auth');
@@ -11,10 +12,10 @@ const auth = require('./auth');
 
 // MySQL Connection
 const connection = mysql.createConnection({
-	host: 'localhost',
-	user: 'night',
-	password: 'Superl1nus',
-	database: 'tsumori'
+	host: config.mysql.host,
+	user: config.mysql.user,
+	password: config.mysql.password,
+	database: config.mysql.database
 });
 connection.connect((err) => {
 	if (err) {
@@ -27,7 +28,7 @@ connection.connect((err) => {
 
 
 // Port
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || config.port;
 
 
 // App
@@ -42,5 +43,5 @@ const app = express()
 
 // Listen
 app.listen(port, () => {
-	console.log(`Tsumori API listening on port ${port}`);
+	console.log(`Tsumori API listening on port ${config.port}`);
 });
